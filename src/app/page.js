@@ -1,6 +1,9 @@
+import Banner from "../components/Banner/Banner";
+
 export default function Home() {
   return (
-    <div className="bg-olive-500 p-10 mt-6">
+    <div className="container mx-auto mt-6">
+      <Banner />
       this part will change on command.
     </div>
   );

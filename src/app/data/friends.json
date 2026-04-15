@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Rafiul Islam",
+    "picture": "https://i.pravatar.cc/150?img=1",
+    "email": "rafiul@gmail.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Studied together at university. Loves playing cricket.",
+    "goal": 14,
+    "next_due_date": "2025-07-10"
+  },
+  {
+    "id": 2,
+    "name": "Tanvir Ahmed",
+    "picture": "https://i.pravatar.cc/150?img=2",
+    "email": "tanvir@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["work", "mentor"],
+    "bio": "Former colleague. Taught me many things.",
+    "goal": 7,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 3,
+    "name": "Nadia Hossain",
+    "picture": "https://i.pravatar.cc/150?img=3",
+    "email": "nadia@gmail.com",
+    "days_since_contact": 10,
+    "status": "almost due",
+    "tags": ["family friend"],
+    "bio": "Childhood neighborhood friend. Currently lives in Dhaka.",
+    "goal": 10,
+    "next_due_date": "2025-07-15"
+  },
+  {
+    "id": 4,
+    "name": "Sabbir Hasan",
+    "picture": "https://i.pravatar.cc/150?img=4",
+    "email": "sabbir@gmail.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["college", "roommate"],
+    "bio": "Lived together in the dorm for two years. Miss him a lot.",
+    "goal": 14,
+    "next_due_date": "2025-07-05"
+  },
+  {
+    "id": 5,
+    "name": "Mitu Akter",
+    "picture": "https://i.pravatar.cc/150?img=5",
+    "email": "mitu@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["close friend"],
+    "bio": "Loves reading books. We talk every week.",
+    "goal": 7,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 6,
+    "name": "Jahid Alam",
+    "picture": "https://i.pravatar.cc/150?img=6",
+    "email": "jahid@gmail.com",
+    "days_since_contact": 8,
+    "status": "almost due",
+    "tags": ["work"],
+    "bio": "Works in the same industry. Connected via LinkedIn.",
+    "goal": 10,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 7,
+    "name": "Sumona Begum",
+    "picture": "https://i.pravatar.cc/150?img=7",
+    "email": "sumona@gmail.com",
+    "days_since_contact": 25,
+    "status": "overdue",
+    "tags": ["college"],
+    "bio": "Worked on many projects together. Currently in Chittagong.",
+    "goal": 21,
+    "next_due_date": "2025-07-01"
+  },
+  {
+    "id": 8,
+    "name": "Arif Chowdhury",
+    "picture": "https://i.pravatar.cc/150?img=8",
+    "email": "arif@gmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["close friend", "neighbor"],
+    "bio": "Lives next door. We meet almost every day.",
+    "goal": 3,
+    "next_due_date": "2025-07-22"
+  }
+]
