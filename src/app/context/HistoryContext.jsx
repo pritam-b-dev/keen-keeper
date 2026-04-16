@@ -4,7 +4,7 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 const HistoryContext = createContext();
 
 export function HistoryProvider({ children }) {
-  const [history, setHistory] = useState();
+  const [history, setHistory] = useState([]);
 
   useEffect(() => {
     const stored = localStorage.getItem("app-History");

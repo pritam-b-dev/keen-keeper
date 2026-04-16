@@ -132,19 +132,19 @@ const FriendsDetails = () => {
             <h4 className=" font-semibold mb-4">Quick Check-In</h4>
             <div className="grid grid-cols-3 gap-4">
               <button
-                onClick={() => handleAction("Call")}
+                onClick={() => handleType("Call")}
                 className="btn btn-ghost border rounded-lg border-gray-200 h-24 flex flex-col gap-2 bg-gray-50 hover:bg-gray-300"
               >
                 <FaPhoneAlt className="text-xl" /> <span>Call</span>
               </button>
               <button
-                onClick={() => handleAction("Text")}
+                onClick={() => handleType("Text")}
                 className="btn btn-ghost border rounded-lg border-gray-200 h-24 flex flex-col gap-2 bg-gray-50 hover:bg-gray-300"
               >
                 <FaCommentDots className="text-xl" /> <span>Text</span>
               </button>
               <button
-                onClick={() => handleAction("Video")}
+                onClick={() => handleType("Video")}
                 className="btn btn-ghost border rounded-lg border-gray-200 h-24 flex flex-col gap-2 bg-gray-50 hover:bg-gray-300"
               >
                 <FaVideo className="text-xl" /> <span>Video</span>
