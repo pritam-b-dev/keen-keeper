@@ -8,7 +8,10 @@ export function HistoryProvider({ children }) {
 
   useEffect(() => {
     const stored = localStorage.getItem("app-History");
-    if (stored) setHistory(JSON.parse(stored));
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      setTimeout(() => setHistory(parsed), 0);
+    }
   }, []);
 
   const addToHistory = (friend, type) => {
@@ -17,7 +20,11 @@ export function HistoryProvider({ children }) {
       friendId: friend.id,
       friendName: friend.name,
       type: type,
-      date: new Date().toISOString,
+      date: new Date().toLocaleString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      }),
     };
 
     const updated = [newEntry, ...history];

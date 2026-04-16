@@ -12,7 +12,7 @@ const Banner = () => {
       <button className="bg-[#244D3F] font-semibold text-white p-2 rounded-lg">
         + Add Friend
       </button>
-      <div className="grid lg:grid-cols-4 gap-4 mt-5 mb-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-5 mb-10">
         <div className="flex flex-col shadow-md justify-center items-center p-6">
           <h1>10</h1>
           <p>Totak friend</p>
