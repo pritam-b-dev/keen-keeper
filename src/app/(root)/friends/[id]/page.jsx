@@ -8,9 +8,9 @@ import {
   FaTrashAlt,
 } from "react-icons/fa";
 import { useParams } from "next/navigation";
-import friends from "../../data/friends.json";
+import friends from "@/data/friends.json";
 import React from "react";
-import { useHistory } from "../../context/HistoryContext";
+import { useHistory } from "@/context/HistoryContext";
 import Image from "next/image";
 
 const FriendsDetails = () => {

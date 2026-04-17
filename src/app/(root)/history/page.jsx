@@ -1,7 +1,7 @@
 "use client";
 import { FaPhoneAlt, FaVideo, FaCommentDots } from "react-icons/fa";
 import React, { useState } from "react";
-import { useHistory } from "../context/HistoryContext";
+import { useHistory } from "@/context/HistoryContext";
 import Image from "next/image";
 
 const History = () => {

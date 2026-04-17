@@ -2,7 +2,7 @@
 import React from "react";
 import { Cell, Legend, Pie, PieChart, Tooltip } from "recharts";
 
-import { useHistory } from "../context/HistoryContext";
+import { useHistory } from "@/context/HistoryContext";
 
 const Dashboard = () => {
   const { history } = useHistory();

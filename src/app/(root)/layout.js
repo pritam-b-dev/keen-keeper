@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import "../globals.css";
+import NavBar from "@/components/NavBar/NavBar";
+import Footer from "@/components/Footer/Footer";
 import { HistoryProvider } from "@/context/HistoryContext";
-import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,16 +19,14 @@ export const metadata = {
   description: "Keep Your Friendships Alive",
 };
 
-export default function RootLayout({ children }) {
+export default function GroupLayout({ children }) {
   return (
-    <html
-      lang="en"
-      data-theme="light"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        <HistoryProvider>{children}</HistoryProvider>
-      </body>
-    </html>
+    <>
+      <HistoryProvider>
+        <NavBar />
+        {children}
+        <Footer />
+      </HistoryProvider>
+    </>
   );
 }

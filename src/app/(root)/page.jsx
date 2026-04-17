@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import Banner from "../components/Banner/Banner";
-import friends from "./data/friends.json";
+import Banner from "@/components/Banner/Banner";
+import friends from "@/data/friends.json";
 
 export default function Home() {
   return (
