@@ -8,17 +8,23 @@ const History = () => {
   const { history } = useHistory();
 
   const [filteredType, setFilteredType] = useState("All");
-  const filteredTypeSelected =
+  const [sort, setSort] = useState("newest");
+  const filteredTypeSelected = (
     filteredType === "All"
-      ? history
-      : history.filter((selected) => selected.type === filteredType);
+      ? [...history]
+      : history.filter((selected) => selected.type === filteredType)
+  ).sort((sortN, sortO) => {
+    const dateN = new Date(sortN.date);
+    const dateO = new Date(sortO.date);
+    return sort === "newest" ? dateO - dateN : dateN - dateO;
+  });
 
   return (
     <div className="container mx-auto p-10 bg-gray-50">
       <h2 className="pb-10 font-bold text-4xl">Timeline</h2>
       <div className="pb-6">
         <select
-          className="select select-bordered appearance-none rounded-xl px-4 py-2 font-medium outline-none transition-all cursor-pointer shadow-sm"
+          className="select select-bordered appearance-none rounded-xl px-4 py-2 font-medium outline-none transition-all cursor-pointer shadow-sm mr-10"
           value={filteredType}
           onChange={(e) => setFilteredType(e.target.value)}
         >
@@ -26,6 +32,14 @@ const History = () => {
           <option value="Call">Call</option>
           <option value="Video">Video Call</option>
           <option value="Text">Text</option>
+        </select>
+        <select
+          className="select select-bordered appearance-none rounded-xl px-4 py-2 font-medium outline-none transition-all cursor-pointer shadow-sm"
+          value={sort}
+          onChange={(e) => setSort(e.target.value)}
+        >
+          <option value="newest">Sort by Newest</option>
+          <option value="oldest">Sort by Oldest</option>
         </select>
       </div>
 
@@ -60,6 +74,12 @@ const History = () => {
                       month: "short",
                       day: "numeric",
                       year: "numeric",
+                    })}
+                    {" • "}
+                    {new Date(item.date).toLocaleTimeString("en-US", {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                      hour12: true,
                     })}
                   </p>
                 </div>

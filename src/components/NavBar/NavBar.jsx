@@ -1,9 +1,9 @@
 import { FaHome } from "react-icons/fa";
 import { RiTimeLine } from "react-icons/ri";
 import { TfiStatsUp } from "react-icons/tfi";
-import Link from "next/link";
 import React from "react";
 import MyNavLink from "./MyNavLink";
+import SearchBar from "./SearchBar/SearchBar";
 
 const NavBar = () => {
   const navItems = [
@@ -24,9 +24,9 @@ const NavBar = () => {
     },
   ];
   return (
-    <div>
-      <div className="container mx-auto navbar bg-base-100 justify-between shadow-[0_4px_10px_-6px_rgba(0,0,0,0.3)]">
-        <div className="justify-start">
+    <div className="border-b border-gray-200">
+      <div className="container mx-auto p-4 bg-base-100 flex items-center justify-between  ">
+        <div className="flex items-center gap-2">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -63,17 +63,19 @@ const NavBar = () => {
             Keen<span className="text-[#244D3F]">Keeper</span>
           </a>
         </div>
-        <div className="hidden lg:flex justify-end">
-          <ul className="menu menu-horizontal px-1 gap-6">
-            {navItems.map((item, index) => (
-              <MyNavLink key={index} href={item.path}>
-                <span className="flex items-center gap-2">
-                  {item.icon}
-                  {item.text}
-                </span>
-              </MyNavLink>
-            ))}
-          </ul>
+        <div className="flex items-center gap-4">
+          <div className="hidden lg:flex gap-6">
+            <ul className=" flex px-1 gap-6 mr-2">
+              {navItems.map((item, index) => (
+                <MyNavLink key={index} href={item.path}>
+                  <span className="flex items-center gap-2">
+                    {item.icon}
+                    {item.text}
+                  </span>
+                </MyNavLink>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

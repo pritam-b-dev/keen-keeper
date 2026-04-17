@@ -20,11 +20,7 @@ export function HistoryProvider({ children }) {
       friendId: friend.id,
       friendName: friend.name,
       type: type,
-      date: new Date().toLocaleString("en-US", {
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-      }),
+      date: new Date().toISOString(),
     };
 
     const updated = [newEntry, ...history];
