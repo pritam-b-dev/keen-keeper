@@ -17,7 +17,7 @@ const Banner = () => {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5 mb-10">
         <div className="flex flex-col shadow-md justify-center items-center md:p-6 gap-2 bg-white">
           <h1 className="font-semibold text-4xl text-[#244D3F]">10</h1>
-          <p className="text-gray-400">Totak friend</p>
+          <p className="text-gray-400">Total friend</p>
         </div>
         <div className="flex flex-col shadow-md justify-center items-center md:p-6 gap-2 bg-white">
           <h1 className="font-semibold text-4xl text-[#244D3F]">3</h1>
