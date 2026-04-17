@@ -17,7 +17,7 @@ const SearchBar = () => {
     router.replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
   return (
-    <label className="input flex items-center gap-2 h-8 md:h-12 w-full max-w-[150px] md:max-w-xs transition-all">
+    <label className="input flex items-center gap-2 h-8 md:h-12 w-full max-w-37.5 md:max-w-xs transition-all">
       <svg
         className="h-4 w-4 md:h-5 md:w-5 opacity-50"
         xmlns="http://www.w3.org/2000/svg"
