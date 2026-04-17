@@ -104,19 +104,19 @@ const FriendDetails = ({ selectedFriend }) => {
           </div>
         </div>
         <div className="md:col-span-8 space-y-6">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-white border border-gray-300 rounded-xl px-6 py-7 text-center shadow-sm">
-              <h3 className="text-3xl font-bold ">
+              <h3 className="md:text-3xl font-bold ">
                 {selectedFriend.days_since_contact}
               </h3>
               <p className="text-xs text-gray-500 mt-1">Days Since Contact</p>
             </div>
             <div className="bg-white border border-gray-300 rounded-xl px-6 py-7 text-center shadow-sm">
-              <h3 className="text-3xl font-bold ">{selectedFriend.goal}</h3>
+              <h3 className="md:text-3xl font-bold ">{selectedFriend.goal}</h3>
               <p className="text-xs text-gray-500 mt-1">Goal (Days)</p>
             </div>
             <div className="bg-white border border-gray-300 rounded-xl px-6 py-7 text-center shadow-sm">
-              <h3 className="text-3xl font-bold ">
+              <h3 className="md:text-3xl font-bold ">
                 {new Date(selectedFriend.next_due_date).toLocaleDateString(
                   "en-US",
                   {
@@ -129,7 +129,7 @@ const FriendDetails = ({ selectedFriend }) => {
               <p className="text-xs text-gray-500 mt-1">Next Due</p>
             </div>
           </div>
-          <div className="bg-white border border-gray-300 rounded-xl p-6 flex justify-between ">
+          <div className="bg-white border border-gray-300 rounded-xl p-2 md:p-6 flex justify-between ">
             <div className="space-y-3">
               <h4 className=" font-semibold">Relationship Goal</h4>
               <p className="text-sm text-gray-500 mt-1">
@@ -143,7 +143,7 @@ const FriendDetails = ({ selectedFriend }) => {
           </div>
           <div className="bg-white border border-gray-300 rounded-xl p-6 ">
             <h4 className=" font-semibold mb-4">Quick Check-In</h4>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               <button
                 onClick={() => handleType("Call")}
                 className="btn btn-ghost border rounded-lg border-gray-200 h-24 flex flex-col gap-2 bg-gray-50 hover:bg-gray-300"

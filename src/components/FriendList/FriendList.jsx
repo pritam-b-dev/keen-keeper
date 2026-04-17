@@ -22,7 +22,7 @@ const FriendList = ({ friends }) => {
           <p className="mt-4 text-gray-500 font-medium">Searching</p>{" "}
         </div>
       ) : (
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 bg-white">
           {friends.map((friend) => (
             <Link href={`/friends/${friend.id}`} key={friend.id}>
               <div className="flex flex-col justify-center items-center border border-gray-200 rounded-lg py-10 space-y-2">

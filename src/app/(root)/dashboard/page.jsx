@@ -53,6 +53,8 @@ const Dashboard = () => {
                 // padding angle is the gap between each pie slice
                 paddingAngle={8}
                 dataKey="value"
+                startAngle={90}
+                endAngle={-270}
                 isAnimationActive={true}
               >
                 {chartData.map((entry, index) => (
@@ -60,7 +62,25 @@ const Dashboard = () => {
                 ))}
               </Pie>
               <Tooltip />
-              <Legend iconType="circle" />
+              <Legend
+                iconType="circle"
+                wrapperStyle={{
+                  paddingTop: "10px",
+                }}
+                iconSize={10}
+                formatter={(value) => (
+                  <span
+                    style={{
+                      marginRight: "15px",
+                      fontWeight: "500",
+                      display: "inline-flex",
+                      verticalAlign: "middle",
+                    }}
+                  >
+                    {value}
+                  </span>
+                )}
+              />
             </PieChart>
           )}
         </div>
