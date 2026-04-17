@@ -21,12 +21,14 @@ export const metadata = {
 
 export default function GroupLayout({ children }) {
   return (
-    <>
+    <div
+      className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
+    >
       <HistoryProvider>
         <NavBar />
         {children}
         <Footer />
       </HistoryProvider>
-    </>
+    </div>
   );
 }
