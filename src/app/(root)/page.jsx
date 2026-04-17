@@ -3,6 +3,7 @@ import friends from "@/data/friends.json";
 
 import FriendList from "../../components/FriendList/FriendList";
 import SearchBar from "../../components/NavBar/SearchBar/SearchBar";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -14,9 +15,13 @@ export default function Home() {
           <h1 className="font-bold text-sm md:text-2xl lg:text-3xl mb-6">
             Your Friends
           </h1>{" "}
-          <SearchBar />
+          <Suspense fallback={null}>
+            <SearchBar />
+          </Suspense>
         </div>
-        <FriendList friends={friends} />
+        <Suspense fallback={null}>
+          <FriendList friends={friends} />
+        </Suspense>
       </div>
     </div>
   );
