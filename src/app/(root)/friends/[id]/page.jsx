@@ -9,11 +9,14 @@ import {
 } from "react-icons/fa";
 import { useParams } from "next/navigation";
 import friends from "@/data/friends.json";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "@/context/HistoryContext";
 import Image from "next/image";
+import { FadeLoader } from "react-spinners";
+import { toast } from "react-toastify";
 
 const FriendsDetails = () => {
+  const [loading, setLoading] = useState(true);
   const params = useParams();
   const selectedFriend = friends.find(
     (friend) => friend.id === parseInt(params.id),
@@ -22,11 +25,27 @@ const FriendsDetails = () => {
 
   const handleType = (type) => {
     addToHistory(selectedFriend, type);
-    alert(`${type} is recorded for ${selectedFriend.name}`);
+    toast.success(`${type} is recorded for ${selectedFriend.name}`);
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <FadeLoader color="#10b981" />
+        <p className="mt-4 text-gray-500 font-medium">Loading...</p>
+      </div>
+    );
+  }
+
   return (
-    <div className="container mx-auto p-15  bg-gray-50">
+    <div className="container mx-auto p-5  bg-gray-50">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         <div className="md:col-span-4 space-y-4">
           <div className="rounded-xl text-center ">

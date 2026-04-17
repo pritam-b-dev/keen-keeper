@@ -30,7 +30,9 @@ const History = () => {
       </div>
 
       {filteredTypeSelected.length === 0 ? (
-        <p>no history</p>
+        <p className="bg-white rounded-lg border border-gray-200 p-15 flex justify-center items-center text-green-900 font-bold text-4xl min-h-28">
+          History List is Empy!
+        </p>
       ) : (
         <div>
           {filteredTypeSelected.map((item) => (
