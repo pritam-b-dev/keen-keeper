@@ -25,7 +25,7 @@ const NavBar = () => {
   ];
   return (
     <div className="border-b border-gray-200">
-      <div className="container mx-auto p-4 bg-base-100 flex items-center justify-between  ">
+      <div className="container mx-auto p-1 bg-base-100 flex items-center justify-between  ">
         <div className="flex items-center gap-2">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,7 +46,7 @@ const NavBar = () => {
               </svg>
             </div>
             <ul
-              tabIndex="-1"
+              tabIndex="{0}"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               {navItems.map((item, index) => (

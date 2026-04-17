@@ -21,10 +21,10 @@ const History = () => {
 
   return (
     <div className="container mx-auto p-10 bg-gray-50">
-      <h2 className="pb-10 font-bold text-4xl">Timeline</h2>
-      <div className="pb-6">
+      <h2 className="p-4 md:p-10 font-bold text-4xl">Timeline</h2>
+      <div className="pb-6 flex gap-2 md:gap-3 flex-row items-center ">
         <select
-          className="select select-bordered appearance-none rounded-xl px-4 py-2 font-medium outline-none transition-all cursor-pointer shadow-sm mr-10"
+          className="select select-bordered appearance-none rounded-xl px-2 py-1 text-xs md:px-4 md:py-2 font-medium outline-none transition-all cursor-pointer shadow-sm h-8 md:h-12"
           value={filteredType}
           onChange={(e) => setFilteredType(e.target.value)}
         >
@@ -34,7 +34,7 @@ const History = () => {
           <option value="Text">Text</option>
         </select>
         <select
-          className="select select-bordered appearance-none rounded-xl px-4 py-2 font-medium outline-none transition-all cursor-pointer shadow-sm"
+          className="select select-bordered appearance-none rounded-xl px-2 py-1 text-xs md:px-4 md:py-2 font-medium outline-none transition-all cursor-pointer shadow-sm h-8 md:h-12"
           value={sort}
           onChange={(e) => setSort(e.target.value)}
         >
